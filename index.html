@@ -5,24 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preparing for a Computer Science Major</title>
+    <title>Why Choose Computer Science?</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
 </head>
 
 <body>
     <header>
-        <div class="navbar">
-            <h1 class="logo">CS Major Prep</h1>
-            <button class="toggle-button" id="menuToggle">&#9776;</button>
-            <nav id="navMenu" class="nav-menu">
-                <ul>
-                    <li><a href="about.html">Why Choose CS?</a></li>
-                    <li><a href="careers.html">Career Paths</a></li>
-                    <li><a href="learn.html">Learn More About CS</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- The logo is styled to look like plain text -->
+        <a href="index.html" class="logo">CS Major Prep</a>
     </header>
 
     <main>
@@ -50,15 +43,7 @@
             </div>
         </section>
     </main>
-
-    <!-- Inline JavaScript -->
     <script>
-        // Toggle navigation menu on small screens
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
         // Add scroll animations using Intersection Observer
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
