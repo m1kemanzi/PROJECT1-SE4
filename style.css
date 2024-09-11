@@ -35,11 +35,17 @@ header {
 /* Hero Section Styles */
 
 .hero {
-    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), url('hero-image.jpg') center/cover;
+    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), url('./students.jpeg') center/cover no-repeat;
     color: #f2e8c6;
     /* Light cream text for contrast */
     text-align: center;
     padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    /* Increased height for a larger appearance */
 }
 
 .hero-title {
