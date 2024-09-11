@@ -1,180 +1,195 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* General Body and Font Styles */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
     color: #333;
-    background-color: #f8f9fa;
-    line-height: 1.6;
+    /* Maintain neutral text color */
+    background-color: #f2e8c6;
+    /* Light background color for better readability */
 }
 
-/* Header */
+
+/* Header Styles */
+
 header {
-    background-color: #002855;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* Navigation */
-nav {
-    background-color: #0056b3;
-    padding: 0.5rem 1rem;
-}
-
-nav ul {
-    list-style: none;
+    position: sticky;
+    top: 0;
+    background-color: #800000;
+    /* Dark maroon */
+    color: #f2e8c6;
+    /* Light cream for contrast */
+    padding: 10px 20px;
+    z-index: 1000;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.logo {
+    font-size: 24px;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffdd57;
-}
 
-/* Main Content */
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* Hero Section Styles */
 
-/* Footer */
-footer {
-    background-color: #002855;
-    color: #fff;
+.hero {
+    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), url('./students.jpeg') center/cover no-repeat;
+    color: #f2e8c6;
+    /* Light cream text for contrast */
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    /* Increased height for a larger appearance */
 }
 
-/* Buttons */
-button {
-    background-color: #0056b3;
-    color: #fff;
+.hero-title {
+    font-size: 48px;
+    margin: 0 0 10px;
+    animation: fadeIn 2s;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 10px 20px;
     border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+    background-color: #982b1c;
+    /* Red accent button */
+    color: #f2e8c6;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #004494;
+.hero-btn:hover {
+    background-color: #800000;
+    /* Darker on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    header h1 {
-        font-size: 1.5rem;
-    }
+/* Info Section Styles */
 
-    main {
-        padding: 1rem;
-    }
-
-    .card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    .testimonial-card {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #531231;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-}
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(50% - 40px);
-    max-width: calc(50% - 40px);
-    transition: transform 0.3s ease;
-}
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-ul {
-    padding-left: 20px;
-}
-ul li {
-    margin-bottom: 10px;
+    padding: 40px 20px;
 }
 
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.info-card {
+    background: #dad4b5;
+    /* Light beige for card background */
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
 }
-.testimonial-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    padding: 20px;
-    max-width: 400px;
-    text-align: center;
+
+.info-card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
-.testimonial-card img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
-.testimonial-card h3 {
-    color: #0044cc;
-    margin-bottom: 10px;
-}
-.testimonial-card p {
-    font-style: italic;
-    margin-bottom: 15px;
-}
-.testimonial-card .info {
+
+.card-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #982b1c;
+    /* Accent color for links */
     font-weight: bold;
-    color: #555;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #800000;
+    /* Darker shade on hover */
+}
+
+
+/* Footer Styles */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #800000;
+    /* Footer matches header for consistency */
+    color: #f2e8c6;
+}
+
+
+/* Call to Action Section Styles */
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #dad4b5;
+    /* Match the card background for consistency */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    /* Optional: Limit width for better presentation */
+}
+
+.call-to-action p {
+    margin-bottom: 20px;
+    color: #333;
+    /* Ensure the text is readable */
+}
+
+
+/* Logo Link Styles to Look Like Plain Text */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f2e8c6;
+    /* Matches the header text color */
+    text-decoration: none;
+    /* Removes the underline */
+    cursor: pointer;
+    /* Adds a pointer cursor to indicate it's clickable */
+}
+
+.logo:hover {
+    color: #f2e8c6;
+    /* Keeps the color the same on hover */
+}
+
+
+/* Keyframe Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    .hero-subtitle {
+        font-size: 18px;
+    }
 }

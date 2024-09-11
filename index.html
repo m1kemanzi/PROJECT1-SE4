@@ -1,9 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Computer Science?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+
+</head>
 
 <body>
-    <h1>How to prepare to be a Computer Science Major:</h1>
-    <p>Do a lot of CS stuff.</p>
+    <header>
+        <a href="index.html" class="logo">CS Major Prep</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-title">Welcome to Your Guide to Becoming a Computer Science Major</h2>
+            <p class="hero-subtitle">Empowering the next generation of tech innovators.</p>
+            <a href="#learn-more" class="hero-btn">Get Started</a>
+        </section>
+
+        <section id="learn-more" class="info-section">
+            <div class="info-card" data-aos="fade-up">
+                <h3>Why Choose Computer Science?</h3>
+                <p>Discover why a Computer Science degree is your gateway to endless career opportunities and high salaries.</p>
+                <a href="about.html" class="card-link">Learn More</a>
+            </div>
+            <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>Career Paths</h3>
+                <p>Explore various career paths that you can pursue with a Computer Science degree, from software development to data science.</p>
+                <a href="careers.html" class="card-link">Explore Careers</a>
+            </div>
+            <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Learn More About CS</h3>
+                <p>Find out how to best prepare for a Computer Science major with resources, tips, and guides.</p>
+                <a href="learn.html" class="card-link">Get Prepared</a>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.info-card').forEach((card) => {
+                observer.observe(card);
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
