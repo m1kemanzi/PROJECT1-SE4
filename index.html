@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png" type="image/x-icon">
 
+
 </head>
 
 <body>
     <header>
-        <!-- The logo is styled to look like plain text -->
         <a href="index.html" class="logo">CS Major Prep</a>
     </header>
 
@@ -44,7 +44,6 @@
         </section>
     </main>
     <script>
-        // Add scroll animations using Intersection Observer
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -63,7 +62,6 @@
             });
         });
 
-        // Smooth scroll effect for links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
