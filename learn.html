@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Computer Scientists</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">CS Major Prep</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-title">Learn About Computer Scientists</h2>
+            <p class="hero-subtitle">Discover the innovators who shape our digital world.</p>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>Who Are Computer Scientists?</h3>
+                <p>Computer scientists are professionals who specialize in the theory of computation, the design of computational systems, and the development of algorithms. They are the innovators behind the technology that powers our everyday lives, from
+                    software applications and web development to artificial intelligence and data security.</p>
+            </div>
+            <div class="info-card">
+                <h3>What Do Computer Scientists Do?</h3>
+                <p>Computer scientists work in various fields, including software development, data science, cybersecurity, artificial intelligence, and more. They design algorithms, write code, develop software, analyze data, and create systems that solve
+                    complex problems. Their work is crucial in developing new technologies, improving existing systems, and finding solutions to some of the world’s biggest challenges.</p>
+            </div>
+            <div class="info-card">
+                <h3>Skills Needed to Be a Computer Scientist</h3>
+                <p>Key skills for computer scientists include strong analytical thinking, problem-solving abilities, proficiency in programming languages (such as Python, Java, and C++), knowledge of data structures and algorithms, and experience with software
+                    development tools. Additionally, computer scientists need excellent communication skills to work effectively in teams and explain their solutions clearly.</p>
+            </div>
+            <div class="info-card">
+                <h3>The Impact of Computer Science</h3>
+                <p>Computer scientists drive innovation across every industry. They are the architects of the digital age, creating technologies that revolutionize how we work, communicate, and live. From developing secure online transactions to creating
+                    machine learning models that predict medical outcomes, the impact of computer science on society is profound and ever-growing.</p>
+            </div>
+            <div class="info-card">
+                <h3>Career Paths for Computer Scientists</h3>
+                <p>With a degree in Computer Science, career opportunities are vast and varied. You can become a software developer, data scientist, cybersecurity analyst, artificial intelligence engineer, or even a tech entrepreneur. The field offers high-paying,
+                    in-demand jobs that provide the chance to work on groundbreaking projects and make a significant impact in the tech industry and beyond.</p>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <p>Inspired to become a computer scientist? Start your journey with our comprehensive resources and guides.</p>
+            <a href="careers.html" class="hero-btn">Explore Careers</a>
+        </section>
+    </main>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.info-card').forEach((card) => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>

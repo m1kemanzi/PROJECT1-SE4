@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Computer Science?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">CS Major Prep</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-title">Why Choose Computer Science?</h2>
+            <p class="hero-subtitle">Unlock a world of opportunities with a degree that powers the future.</p>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>High Demand and Lucrative Careers</h3>
+                <p>Computer Science graduates are in high demand across nearly every industry, from tech and finance to healthcare and entertainment. With competitive salaries and numerous job opportunities, a degree in Computer Science opens the door to
+                    a secure and prosperous future.</p>
+            </div>
+            <div class="info-card">
+                <h3>Diverse Career Opportunities</h3>
+                <p>From software development and cybersecurity to artificial intelligence and data science, Computer Science is one of the most versatile degrees you can pursue. You’ll develop critical thinking, problem-solving, and technical skills that
+                    are valuable in any career path.</p>
+            </div>
+            <div class="info-card">
+                <h3>Innovation and Impact</h3>
+                <p>Computer Science is at the heart of innovation. Whether it’s developing the next big app, advancing robotics, or enhancing cybersecurity, Computer Scientists play a crucial role in shaping the future. Your work can make a meaningful impact
+                    on society, improving lives worldwide.</p>
+            </div>
+            <div class="info-card">
+                <h3>Building a Strong Skill Set</h3>
+                <p>Beyond coding, Computer Science teaches you to think logically, design efficient systems, and work collaboratively on complex projects. These skills are essential in the tech industry and beyond, making you a valuable asset in any field
+                    you choose.</p>
+            </div>
+            <div class="info-card">
+                <h3>Preparing for the Future</h3>
+                <p>As technology evolves, the demand for skilled Computer Scientists continues to grow. From the rise of artificial intelligence to the importance of data security, Computer Science equips you with the knowledge to navigate and lead in a
+                    digital world.</p>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <p>Ready to start your journey? Explore our resources to learn how to prepare for a successful career in Computer Science.</p>
+            <a href="learn.html" class="hero-btn">Get Prepared</a>
+        </section>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.info-card').forEach((card) => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
