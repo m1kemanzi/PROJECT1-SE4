@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Developer Carrer</title>
     <link  rel="stylesheet" href="style.css">
-    <link rel ="stylesheet" href="./testimonials.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 
 </head>
 
@@ -13,24 +14,26 @@
     <header>
         <a href="index.html" class="logo">CS Major Prep</a>
     </header>
+
+    <main>
+        <section class="hero" id="webDeveloper">
+            <h2 class="hero-title">Web Developer</h2>
+            <p class="hero-subtitle">Web developers build websites and ensure they perform reliably and efficiently. Web developers may focus on front-end development(what the user sees), back-end development(proper functionality) or can be full-stack, which involves both.</p>
+        </section>
     
-    <section>
-        <h2>Web Developer</h2>
-        <p>Web developers build websites and ensure they perform reliably and efficiently. Web developers may focus on front-end development(what the user sees), back-end development(proper functionality) or can be full-stack, which involves both.</p>
-        <br>
-        <div class="card-container">
-            <div class="card">
+        <section class="info-section">
+            <div class="info-card">
                 <h3>What does a web developer do?</h3>
-            <ul>
-                <li>Design user interfaces and navigation menus</li>
-                <li>Write and review code for sites. HTML, XML, or JavaScript</li>
-                <li>Integrate multimedia content onto a site</li>
-                <li>Test web applications</li>
-                <li>Collaborate with designers, developers, and stakeholders</li>
-            </ul>
+                <ul>
+                    <li>Design user interfaces and navigation menus</li>
+                    <li>Write and review code for sites. HTML, XML, or JavaScript</li>
+                    <li>Integrate multimedia content onto a site</li>
+                    <li>Test web applications</li>
+                    <li>Collaborate with designers, developers, and stakeholders</li>
+                </ul>
+              
             </div>
-    
-            <div class="card">
+            <div class="info-card">
                 <h3>How much does a web developer make?</h3>
                 <ul>
                     <li>The average salary for a web developer in the US is $80,730</li>
@@ -38,8 +41,7 @@
                     <li>There is an increase in web development jobs due to the growth of e-commerce</li>
                 </ul>
             </div>
-
-            <div class="card">
+            <div class="info-card">
                 <h3>What skills does a web developer require?</h3>
                 <ul>
                     <li>Coding</li>
@@ -52,8 +54,7 @@
                     <li>Detail-oriented</li>
                 </ul>
             </div>
-
-            <div class="card">
+            <div class="info-card">
                 <h3>What are some common jobs for web developers?</h3>
                 <ul>
                     <li>Front-end Developer</li>
@@ -64,15 +65,37 @@
                     <li>Technical Consultant</li>
                 </ul>
             </div>
-              
-        </div>
-       
-        
-        
-        
-    </section>
+            </div>
 
+            
+    
+    
+        </section>
 
+        
+        
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.info-card').forEach((card) => {
+                observer.observe(card);
+            });
+        });
+    </script>
 
 
 </body>
