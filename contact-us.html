@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .contact-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .call-btn {
+            display: block;
+            font-size: 1.1rem;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            width: 200px;
+        }
+
+        .call-btn:hover {
+            background-color: #218838;
+        }
+
+        .hero-title {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">CS Major Prep</a>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2 class="hero-title">Contact Us</h2>
+            <p class="hero-subtitle">Get in touch with us for any inquiries or assistance.</p>
+        </section>
+
+        <section class="info-section">
+            <div class="contact-card">
+                <h3>Phone</h3>
+                <p><a href="tel:+14058940788">+1 405 894 0788</a></p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Address</h3>
+                <p>2501 East Memorial Rd, Edmond, Oklahoma</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=elvis.shema@eagles.oc.edu" target="_blank">elvis.shema@eagles.oc.edu</a></p>
+            </div>
+
+            <!-- Click-to-call button -->
+            <a href="tel:+14058940788" class="call-btn">Call Us Now</a>
+        </section>
+
+        <section class="call-to-action">
+            <p>Need more information? Don’t hesitate to reach out by phone or email. We’re here to help!</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elvis.shema@eagles.oc.edu" class="contact-btn" target="_blank">Send Us an Email</a>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.contact-card').forEach((card) => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
