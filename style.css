@@ -76,6 +76,48 @@ header {
     /* Increased height for a larger appearance */
 }
 
+#webDeveloper {
+    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), url('./web.jpeg') center/cover no-repeat;
+    color: #f2e8c6;
+    /* Light cream text for contrast */
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    /* Increased height for a larger appearance */
+}
+
+#softwareEngineer {
+    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), url('./se.jpeg') center/cover no-repeat;
+    color: #f2e8c6;
+    /* Light cream text for contrast */
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    /* Increased height for a larger appearance */
+}
+
+#dataScientist {
+    background: linear-gradient(rgba(128, 0, 0, 0.7), rgba(128, 0, 0, 0.7)), url('./Data-Science-and-Analytics.jpg') center/cover no-repeat;
+    color: #f2e8c6;
+    /* Light cream text for contrast */
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    /* Increased height for a larger appearance */
+}
+
 .hero-title {
     font-size: 48px;
     margin: 0 0 10px;
