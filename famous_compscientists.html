@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Computer Scientists</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .info-image {
+            width: 300px;
+            height: auto; 
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 15px auto; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">CS Major Prep</a>
+    </header>
+
+    <main>
+        <section class="famousCS">
+            <h2 class="hero-title">Famous Computer Scientists</h2>
+            <p class="hero-subtitle">Meet the pioneers and innovators who shaped the world of technology.</p>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <img src="Bill Gates.jpeg" alt="Bill Gates" class="info-image">
+                <h3>Bill Gates</h3>
+                <p>Co-founder of Microsoft, Bill Gates revolutionized the personal computing industry. His contributions to software development and his vision of "a computer on every desk and in every home" made Microsoft a dominant force in the tech world.</p>
+            </div>
+            <div class="info-card">
+                <img src="Steve_Jobs.jpeg" alt="Steve Jobs" class="info-image">
+                <h3>Steve Jobs</h3>
+                <p>Steve Jobs, co-founder of Apple, was a visionary who transformed multiple industries, including personal computing, music, and mobile phones. His innovation in user-friendly design and technology changed how we interact with devices today.</p>
+            </div>
+            <div class="info-card">
+                <img src="Larry-Page.jpeg" alt="Larry Page" class="info-image">
+                <h3>Larry Page</h3>
+                <p>As co-founder of Google, Larry Page played a pivotal role in the development of the world's most powerful search engine. His contributions to information organization and artificial intelligence continue to shape the future of the internet.</p>
+            </div>
+            <div class="info-card">
+                <img src="Marek-Zuckerberg.jpeg" alt="Mark Zuckerberg" class="info-image">
+                <h3>Mark Zuckerberg</h3>
+                <p>Mark Zuckerberg is the co-founder and CEO of Facebook, now Meta, a platform that transformed global communication. His work in social networking redefined how people connect and share information in the digital age.</p>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <p>Want your name to be among them in the future? Contact Us and we can get you started on your journey</p>
+            <a href="contact-us.html" class="hero-btn">Contact US</a>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.info-card').forEach((card) => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
